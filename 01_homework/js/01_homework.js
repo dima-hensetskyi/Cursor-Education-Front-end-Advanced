@@ -1,7 +1,7 @@
 //Base
-let priceAmericano = 15.678;
-let priceFrappe = 123.965;
-let priceLatte = 90.2345;
+const priceAmericano = 15.678;
+const priceFrappe = 123.965;
+const priceLatte = 90.2345;
 
 
 const maxPrice = Math.max(priceAmericano, priceFrappe, priceLatte);
@@ -24,11 +24,11 @@ const sumRoundingUpPrices = Math.round(getSumPrices / 100) * 100;
 console.log(`Cума товарів округлена до сотень ${sumRoundingUpPrices}`);
 
 
-let pair = sumRoundingDownPrices % 2 == 0;
+const pair = sumRoundingDownPrices % 2 == 0;
 console.log(`Чи є округлена сума всіх товарів парним числом?  ${pair}`);
 
-
-let rest = +(500 - getSumPrices).toFixed(2);
+let cash = 500;
+const rest = +(cash - getSumPrices).toFixed(2);
 console.log(`Якщо клієнт платить 500 грн, решта - ${rest}`);
 
 
@@ -36,17 +36,17 @@ const averageValue = +(getSumPrices / 3).toFixed(2);
 console.log(`Cереднє значення цін, округлене до другого знаку після коми: ${averageValue}`);
 
 
-const discount = Math.floor(Math.random() * 100);
+const discount = Math.floor(Math.random() * 101);
 
-let pay = +((Math.random() * getSumPrices) + minPrice).toFixed(2);
+const pay = +((Math.random() * getSumPrices) + minPrice).toFixed(2);
 
 
-let amountPaid = +(pay - (pay * (discount / 100))).toFixed(2);
+const amountPaid = +(pay - (pay * (discount / 100))).toFixed(2);
 console.log(`Замовлення на суму: ${pay} Cума до сплати враховуючи знижку ${discount}% cклала - ${amountPaid} `);
 
 
 const profit = pay / 2;
-const netProfit = Math.round(profit - pay * (discount / 100));
+const netProfit = +(profit - pay * (discount / 100)).toFixed(2);
 console.log(`Чистий прибуток склав: ${netProfit}`);
 
 //Advanced
