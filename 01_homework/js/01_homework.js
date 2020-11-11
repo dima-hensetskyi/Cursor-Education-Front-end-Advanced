@@ -20,7 +20,7 @@ const sumRoundingDownPrices = Math.floor(priceAmericano) + Math.floor(priceFrapp
 console.log(`Сума округлень в меншу сторону: ${sumRoundingDownPrices}`);
 
 
-const sumRoundingUpPrices = Math.ceil(getSumPrices / 100) * 100;
+const sumRoundingUpPrices = Math.round(getSumPrices / 100) * 100;
 console.log(`Cума товарів округлена до сотень ${sumRoundingUpPrices}`);
 
 
