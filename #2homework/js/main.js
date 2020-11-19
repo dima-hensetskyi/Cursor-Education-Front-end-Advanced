@@ -2,34 +2,27 @@ let minNumber;
 let maxNumber;
 
 do {
-    minNumber = +prompt("Введіть, будь ласка, мінімальне значення", "0");
-    minNumber = +minNumber.toFixed(0);
-
-} while (isNaN(minNumber));
-
+    minNumber = Math.round(prompt("Введіть, будь ласка, мінімальне значення", "0"));
+} while (!Number.isInteger(minNumber))
 
 do {
-    maxNumber = +prompt("Введіть, будь ласка, максимальне значення", "100");
-    maxNumber = +maxNumber.toFixed(0);
+    maxNumber = Math.round(prompt("Введіть, будь ласка, максимальне значення", "100"));
 
+} while (!Number.isInteger(maxNumber))
 
-    while (maxNumber <= minNumber && maxNumber !== 0) {
-        maxNumber = +prompt("Введіть, будь ласка, максимальне значення, яке більше мінімального");
-        maxNumber = +maxNumber.toFixed(0);
-    };
+while (minNumber > maxNumber || !Number.isInteger(maxNumber)) {
+    maxNumber = Math.round(prompt("Введіть максимальне значення, яке більше мінімального"))
+}
 
-} while (isNaN(maxNumber));
-
-let odd = confirm("Чи потрібно пропускати парні числа?");
+const odd = confirm("Чи потрібно пропускати парні числа?");
 let result = 0;
 
-for (let i = minNumber; i < maxNumber + 1; i++) {
-    if (odd === false) {
-        result += i;
-    } else if (odd === true) {
-        i % 2 === 0 ? 0 : result += i;
-    };
-};
+for (let i = minNumber; i <= maxNumber; i++) {
+    if (odd && i % 2 === 0) {
+        continue;
+    }
+    result += i;
+}
 
 console.log(`
 Мінімальне значення: ${minNumber}
