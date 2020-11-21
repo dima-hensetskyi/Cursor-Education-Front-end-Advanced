@@ -1,20 +1,27 @@
-/* function getMaxDigit(...number) {
-    const stringOnlyNumber = function (number) {
-        String(number).split("");
-        let newString = "";
-        for (let letter of string) {
-            if (Number(letter)) {
-                newString += Number(letter);
-            }
+function getMaxDigit(...number) {
+    const string = String(number).split("");
+    let newString = "";
+    for (let letter of string) {
+        if (Number(letter)) {
+            newString += Number(letter);
         }
     }
     return Math.max(...newString);
 }
 
-function getPow(a, b) {
-    let result = a;
-    for (let i = 1; i < b; i++) {
-        result *= a;
+function getPow(number, pow) {
+    let powNumber = 1;
+    let result = number;
+    if (pow > 0) {
+        for (let i = 1; i < pow; i++) {
+            result *= number;
+        }
+    } else if (pow < 0) {
+        for (let i = 0; i < Math.abs(pow); i++) {
+            result = powNumber /= number;
+        }
+    } else {
+        result = powNumber;
     }
     return result;
 }
@@ -30,7 +37,7 @@ function getSumAfterTax(sum, tax = 19.5) {
             console.log("Ви ввели некоректний відсоток податку");
         };
     };
-    return sum - (sum * (tax / 100));
+    return +(sum - (sum * (tax / 100))).toFixed(2);
 }
 
 const getRandomNumber = (min, max) => {
@@ -49,17 +56,30 @@ function getLetterRepeat(letter, word) {
 }
 
 function convertCurrency(currency) {
-    const selldollarCurrency = 28.35;
-    const buydollarCurrency = 28.15;
+    const sellDollarCurrency = 28.35;
+    const buyDollarCurrency = 28.15;
+    const checkCurrency = () => {
+        if (typeof (currency) !== "string") {
+            currency = prompt("Введіть, будь ласка, суму для обміну з знаком валюти $ або UAH");
+        }
+        currency = currency.toUpperCase();
+        do {
+            while (currency.includes("-")) {
+                currency = prompt("Ви ввели негативне значення. Введіть, будь ласка, суму для обміну з знаком валюти $ або UAH");
+            }
+            while (!currency.toUpperCase().includes("UAH") && !currency.includes("$")) {
+                currency = prompt("Введіть, будь ласка, суму для обміну з знаком валюти $ або UAH");
+            }
+        } while (currency.includes("-") || !currency)
+        return currency;
+    }
+    currency = checkCurrency();
     let sum = 0;
 
-    if (currency.toUpperCase().includes("$")) {
-        sum = +currency.split("$")[0] * selldollarCurrency;
-    } else if (currency.toUpperCase().includes("UAH")) {
-        sum = +currency.split("UAH")[0] * buydollarCurrency;
-    } else {
-        console.log("Ви ввели некоректне значення");
-        convertCurrency(currency = prompt("Некоректне значення. Введіть, будь ласка, суму для обміну з знаком валюти $ або UAH"));
+    if (currency.includes("$")) {
+        sum = +currency.split("$")[0] * sellDollarCurrency;
+    } else if (currency.includes("UAH")) {
+        sum = +currency.split("UAH")[0] * buyDollarCurrency;
     }
     return sum;
 }
@@ -83,18 +103,15 @@ function deleateLetters(letter, string) {
     }
     return newString;
 }
- */
+
 function isPalidrom(string) {
-    const reverse = function (string) {
-        console.log(string.split(",")); 
-    }
+    string = deleateLetters(string, " ").toLowerCase();
+    const reverse = (string) => string.split("").reverse().join("");
     const reverseString = reverse(string);
-    return (reverseString.toLowerCase() === string.toLowerCase());
+    return (reverseString === string);
 }
-console.log(isPalidrom("Я тут"))
-console.log(isPalidrom("Я несу гусеня"))
-console.log(isPalidrom("Янесугусеня"))
-/* function deleteDuplicateLetter(string) {
+
+function deleteDuplicateLetter(string) {
     let newString = "";
     string = string.toLowerCase();
 
@@ -113,9 +130,9 @@ console.log(isPalidrom("Янесугусеня"))
         }
 
     }
-    return newString; */
+    return newString;
+}
 
-/*
 console.log(`Функція №1: getMaxDigit(6, 987). Результат: ${getMaxDigit(6, 987)}`);
 console.log(`Функція №2: getPow(5, 2). Результат: ${getPow(5, 2)}`);
 console.log(`Функція №3: getCorrectName("гАНдРіЙ"). Результат: ${getCorrectName("гАНдРіЙ")}`);
@@ -127,4 +144,4 @@ console.log(`Функція №8: getRandomPaswword(). Результат: ${get
 console.log(`Функція №9: deleateLetters("a", "blablabla"). Результат: ${deleateLetters("a", "blablabla")}`);
 console.log(`Функція №10: isPalidrom("Я несу гусеня"). Результат: ${isPalidrom("Я несу гусеня")}`);
 console.log(`Функція №11: deleteDuplicateLetter("Who deleted all the repetitive letters?").
-Результат: ${deleteDuplicateLetter("Who deleted all the repetitive letters?")}`); */
+Результат: ${deleteDuplicateLetter("Who deleted all the repetitive letters?")}`);

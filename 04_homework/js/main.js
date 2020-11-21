@@ -49,6 +49,3 @@ console.log(setMarkForStudent);
 
 const setMarkForStudentRandom = setMarkRandom(breakStudentIntoPairs, themes, marks);
 console.log(setMarkForStudentRandom);
-console.log(students);
-console.log(themes);
-console.log(marks);
