@@ -15,7 +15,7 @@ function breakIntoPairs(arrStudents) {
 function setThemsForStudens(arrStudentsPairs, arrThemes) {
     const result = [];
     for (let i = 0; i < arrStudentsPairs.length; i++) {
-        result.push(arrStudentsPairs[i].concat(arrThemes[i]));
+        result.push([arrStudentsPairs[i].join(" і "), arrThemes[i]]);
     }
     return result;
 }
@@ -33,7 +33,7 @@ function setMarkRandom(arrStudentsPairs, arrThemes, arrMarks) {
     const randomThemesIndex = () => Math.floor(Math.random() * arrThemes.length)
     const result = [];
     for (let i = 0; i < arrStudentsPairs.length; i++) {
-        result.push(arrStudentsPairs[i].concat(arrThemes[randomThemesIndex()], arrMarks[randomMarksIndex()]));
+        result.push([arrStudentsPairs[i].join(" і "), arrThemes[randomThemesIndex()], arrMarks[randomMarksIndex()]]);
     }
     return result;
 }
