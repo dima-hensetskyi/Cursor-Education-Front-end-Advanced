@@ -101,12 +101,12 @@ function getDividedByFive(...numbers) {
     return numbers.filter((number) => Number.isInteger(number / 5));
 }
 
-console.log(`Функція#1 getRandomArray (15, 1, 100) -> ${getRandomArray(15, 1, 100)}`)
-console.log(`Функція#2 getModa (1, 2, 2, 3, 3, 3, 4, 4, NaN, null) -> ${getModa(1, 2, 2, 3, 3, 3, 4, 4, NaN, null)}`)
+console.log(`Функція#1 getRandomArray (15, 1, 100) -> ${getRandomArray(15, 1, 100)}`);
+console.log(`Функція#2 getModa (1, 2, 2, 3, 3, 3, 4, 4, NaN, null) -> ${getModa(1, 2, 2, 3, 3, 3, 4, 4, NaN, null)}`);
 console.log(`Функція#3 getAverage (6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) ->
-${getAverage (6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`)
-console.log(`Функція#4 getMediana (1, 2, 3, 4) -> ${getMediana (1, 2, 3, 4)}`)
-console.log(`Функція#5 filterEvenNumbers (1, 2, 3, 4, 5, 6) -> ${filterEvenNumbers (1, 2, 3, 4, 5, 6)}`)
-console.log(`Функція#6 countPositiveNumbers (1, -2, 3, -4, -5, 6) -> ${countPositiveNumbers (1, -2, 3, -4, -5, 6)}`)
+${getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`);
+console.log(`Функція#4 getMediana (1, 2, 3, 4) -> ${getMediana(1, 2, 3, 4)}`);
+console.log(`Функція#5 filterEvenNumbers (1, 2, 3, 4, 5, 6) -> ${filterEvenNumbers(1, 2, 3, 4, 5, 6)}`);
+console.log(`Функція#6 countPositiveNumbers (1, -2, 3, -4, -5, 6) -> ${countPositiveNumbers(1, -2, 3, -4, -5, 6)}`);
 console.log(`Функція#7 getDividedByFive (6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2) ->
- ${getDividedByFive (6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`)
+ ${getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`);
