@@ -14,10 +14,11 @@ function getRandomArray(length = 5, min = 0, max = 15) {
     return randomArray;
 }
 
-function getModa(...numbers) {
-    const numberFilter = numbers.filter((number) => Number.isInteger(number));
+const numberFilter = (arrNumber) => arrNumber.filter((number) => Number.isInteger(number));
 
-    const descriptionModa = numberFilter.reduce((description, number, index, arr) => {
+function getModa(...numbers) {
+    numbersFilter = numberFilter(numbers)
+    const descriptionModa = numbersFilter.reduce((description, number, index, arr) => {
         let counter = 0;
         for (let item of arr) {
             if (item === number) {
@@ -41,8 +42,8 @@ function getModa(...numbers) {
 }
 
 function getAverage(...numbers) {
-    const numberFilter = numbers.filter((number) => Number.isInteger(number));
-    return numberFilter.reduce((total, number, index, arr) => {
+    const numbersFilter = numberFilter(numbers);
+    return numbersFilter.reduce((total, number, index, arr) => {
         total += number;
         const lastNumber = index === arr.length - 1;
         if (lastNumber) {
@@ -75,31 +76,18 @@ function getMediana(...numbers) {
 }
 
 function filterEvenNumbers(...numbers) {
-    return numbers.reduce((arrOddNumbers, number) => {
-        if (Number.isInteger(number)) {
-            const pair = (number % 2) === 0;
-            if (!pair) {
-                arrOddNumbers.push(number);
-            }
-        }
-        return arrOddNumbers
-    }, []);
+    return numbers.filter(number => number % 2 === 1);
 }
 
 function countPositiveNumbers(...numbers) {
-    const arrnumbers = numbers.reduce((arrPositiveNum, number) => {
-        const positiveNumber = number > 0 && typeof (number === "number") && !isNaN(number);
-        if (positiveNumber) {
-            arrPositiveNum.push(number);
-        }
-        return arrPositiveNum;
-    }, []);
-    return arrnumbers.length;
+    return numbers.filter(number => number > 0).length;
 }
 
 function getDividedByFive(...numbers) {
     return numbers.filter((number) => Number.isInteger(number / 5));
 }
+
+
 
 console.log(`Функція#1 getRandomArray (15, 1, 100) -> ${getRandomArray(15, 1, 100)}`);
 console.log(`Функція#2 getModa (1, 2, 2, 3, 3, 3, 4, 4, NaN, null) -> ${getModa(1, 2, 2, 3, 3, 3, 4, 4, NaN, null)}`);
