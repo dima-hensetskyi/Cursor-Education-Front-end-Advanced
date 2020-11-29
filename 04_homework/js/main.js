@@ -4,38 +4,25 @@ const marks = [4, 5, 5, 3, 4, 5];
 
 function breakIntoPairs(arrStudents) {
     const copyArrStudents = [...arrStudents];
-    const result = [
+    return [
         [copyArrStudents[0], copyArrStudents[2]],
         [copyArrStudents[1], copyArrStudents[3]],
         [copyArrStudents[4], copyArrStudents[5]]
     ];
-    return result;
 }
 
 function setThemsForStudens(arrStudentsPairs, arrThemes) {
-    const result = [];
-    for (let i = 0; i < arrStudentsPairs.length; i++) {
-        result.push([arrStudentsPairs[i].join(" і "), arrThemes[i]]);
-    }
-    return result;
+    return arrStudentsPairs.map((arrStudent, index) => [arrStudent.join(" і "), arrThemes[index]]);
 }
 
 function setMark(arrStudents, arrMarks) {
-    const result = [];
-    for (let i = 0; i < arrStudents.length; i++) {
-        result.push([arrStudents[i], (arrMarks[i])]);
-    }
-    return result;
+    return arrStudents.map((student, index) => [student, arrMarks[index]]);
 }
 
 function setMarkRandom(arrStudentsPairs, arrThemes, arrMarks) {
     const randomMarksIndex = () => Math.floor(Math.random() * arrMarks.length)
     const randomThemesIndex = () => Math.floor(Math.random() * arrThemes.length)
-    const result = [];
-    for (let i = 0; i < arrStudentsPairs.length; i++) {
-        result.push([arrStudentsPairs[i].join(" і "), arrThemes[randomThemesIndex()], arrMarks[randomMarksIndex()]]);
-    }
-    return result;
+    return arrStudentsPairs.map(studentsPair => [studentsPair.join(" і "), arrThemes[randomThemesIndex()], arrMarks[randomMarksIndex()]]);
 }
 
 const breakStudentIntoPairs = breakIntoPairs(students);
