@@ -75,17 +75,11 @@ function getMediana(...numbers) {
     return mediana(numberSort);
 }
 
-function filterEvenNumbers(...numbers) {
-    return numbers.filter(number => number % 2 === 1);
-}
+const filterEvenNumbers = (...numbers) => numbers.filter(number => number % 2 === 1);
 
-function countPositiveNumbers(...numbers) {
-    return numbers.filter(number => number > 0).length;
-}
+const countPositiveNumbers = (...numbers) => numbers.filter(number => number > 0).length;
 
-function getDividedByFive(...numbers) {
-    return numbers.filter((number) => Number.isInteger(number / 5));
-}
+const getDividedByFive = (...numbers) => numbers.filter((number) => Number.isInteger(number / 5));
 
 
 
