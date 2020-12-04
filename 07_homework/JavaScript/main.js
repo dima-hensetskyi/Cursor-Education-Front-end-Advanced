@@ -36,5 +36,6 @@ function getMySalary(country) {
 console.log(`
 Скільки ви податків заплатите в Україні з зарплатні у 300$? -> ${getMyTaxes.call(ukraine, 300)}$
 У Латвії IT-спеціалісти у середньому сплачують ${getMiddleTaxes.call(latvia)}$ податку
-А у Литві усі IT-спеціалісти разом сплачують ${getTotalTaxes.call(litva)}$`)
+А у Литві усі IT-спеціалісти разом сплачують ${getTotalTaxes.call(litva)}$
+Функція getMySalary запущена...`)
 getMySalary(ukraine);
