@@ -15,22 +15,18 @@ function getTotalTaxes() {
 }
 
 function getMySalary(country) {
-    function salaryInfo() {
+    setInterval(() => {
         const minSalary = 1500;
         const maxSalary = 2000;
         const salary = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
         const taxes = getMyTaxes.call(this, salary);
         const profit = +(salary - taxes).toFixed(2);
-        return {
+        console.log({
             salary,
             taxes,
             profit
-        }
-    }
-
-    return setInterval(() => {
-        console.log(salaryInfo.call(country))
-    }, 10000)
+        });
+    }, 1000);
 }
 
 console.log(`
