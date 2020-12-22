@@ -33,6 +33,13 @@ const getCharacters = (episode) => fetch("https://swapi.dev/api/people")
 
 showInformation.addEventListener("click", () => {
     const episode = selectEpisode.value;
+    table.innerHTML = `
+    <tr>
+    <th>Name</th>
+    <th>Date of birth</th>
+    <th>Gender</th>
+    </tr>
+    `
     getCharacters(episode);
 });
 toPlanet.addEventListener("click", () => {
