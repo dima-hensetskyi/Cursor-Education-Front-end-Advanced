@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="style/index.css">
+    <title>Homework_11 Hensetskiy</title>
+</head>
+
+<body>
+    <header>
+        <img id="starWarsLogo" src="img/Star_Wars_Logo.jpg" alt="Star wars logo">
+        <h1>Welcome to Star Wars</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="selected"><a href="index.html">Home</a></li>
+            <li><a href="html/planets.html">Planets</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="bloc">
+            <h1 class="title">Episodes of the Star Wars:</h1>
+            <ul class="films-list"> </ul>
+        </div>
+
+        <div class="choose-episode">
+            <form class="select">
+                <h3 class="title">Select episode</h3>
+                <select name="select episode" id="select-episode">
+                    <option value="1">Episode 1</option>
+                    <option value="2">Episode 2</option>
+                    <option value="3">Episode 3</option>
+                    <option value="4">Episode 4</option>
+                    <option value="5">Episode 5</option>
+                    <option value="6">Episode 6</option>
+                </select>
+                <button id="show-information" type="button">Show information</button>
+            </form>
+            <div class="planets">
+                <button id="planets">Show information about planets</button>
+            </div>
+        </div>
+
+        <div class="bloc">
+            <h1 class="title">Characters of the Star Wars:</h1>
+            <table id="characters-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Date of birth</th>
+                    <th>Gender</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
