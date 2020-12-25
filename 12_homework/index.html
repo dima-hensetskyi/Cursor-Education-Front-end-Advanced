@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
     <title>Homework_11 Hensetskiy</title>
 </head>
@@ -28,19 +33,21 @@
             <ul class="films-list"> </ul>
         </div>
 
-        <div class="choose-episode">
-            <form class="select">
+        <div class="center">
+            <div class="choose-episode">
                 <h3 class="title">Select episode</h3>
-                <select name="select episode" id="select-episode">
-                    <option value="1">Episode 1</option>
-                    <option value="2">Episode 2</option>
-                    <option value="3">Episode 3</option>
-                    <option value="4">Episode 4</option>
-                    <option value="5">Episode 5</option>
-                    <option value="6">Episode 6</option>
-                </select>
-                <button id="show-information" type="button">Show information</button>
-            </form>
+                <form class="select">
+                    <select name="select episode" id="select-episode">
+                        <option value="1">Episode 1</option>
+                        <option value="2">Episode 2</option>
+                        <option value="3">Episode 3</option>
+                        <option value="4">Episode 4</option>
+                        <option value="5">Episode 5</option>
+                        <option value="6">Episode 6</option>
+                    </select>
+                    <button id="show-information" type="button">Show information</button>
+                </form>
+            </div>
             <div class="planets">
                 <button id="planets">Show information about planets</button>
             </div>
