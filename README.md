@@ -1,7 +1,5 @@
 # Cursor-Education-Front-end-Advanced
-Name | GitHub folder | GitHub Pages
------|---------------|-------------
-Name | GitHub folder | GitHub Pages
+Name | GitHub Folder | GitHub Pages
 -----|---------------|-------------
 HW1-Variables-and-data-types | [folder](https://github.com/dima-hensetskyi/Cursor-Education-Front-end-Advanced/tree/master/01_homework) | [page](https://dima-hensetskyi.github.io/Cursor-Education-Front-end-Advanced/01_homework/01_homework.html)
 HW2-Сonditions-loops | [folder](https://github.com/dima-hensetskyi/HW-2) | [page](https://dima-hensetskyi.github.io/HW-2/index.html)
