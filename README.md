@@ -21,4 +21,4 @@ HW17-Component-Lifecycle | [folder](https://github.com/dima-hensetskyi/homework_
 HW18-React-Router | [folder](https://github.com/dima-hensetskyi/homework_18/tree/master) | [page](https://dima-hensetskyi.github.io/homework_18/)
 HW19-React-Styled-Components | [folder](https://github.com/dima-hensetskyi/homework_19/tree/master) | [page](https://dima-hensetskyi.github.io/homework_19/)
 HW20-React-Redux | [folder](https://github.com/dima-hensetskyi/homework_20/tree/master) | [page](https://dima-hensetskyi.github.io/homework_20/)
-HW21-Redux-Thunk | [folder](https://github.com/dima-hensetskyi/React-Redux-Thunk#react-redux-thunk) | [page](https://dima-hensetskyi.github.io/React-Redux-Thunk/#/)
+HW21-Redux-Thunk | [folder](https://github.com/dima-hensetskyi/React-Redux-Thunk/tree/master) | [page](https://dima-hensetskyi.github.io/React-Redux-Thunk/#/)
